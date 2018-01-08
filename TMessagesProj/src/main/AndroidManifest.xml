@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.telegram.messenger"
+    package="ru.isaynet.messenger"
     android:installLocation="auto">
 
     <supports-screens android:anyDensity="true"
@@ -66,13 +66,12 @@
         android:allowBackup="false"
         android:hardwareAccelerated="@bool/useHardwareAcceleration"
         android:icon="@drawable/ic_launcher"
-        android:roundIcon="@drawable/ic_launcher"
         android:largeHeap="true"
         android:theme="@style/Theme.TMessages.Start"
-        android:manageSpaceActivity="org.telegram.ui.ManageSpaceActivity">
+        android:manageSpaceActivity="ru.isaynet.ui.ManageSpaceActivity">
 
         <activity
-            android:name="org.telegram.ui.LaunchActivity"
+            android:name="ru.isaynet.ui.LaunchActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:hardwareAccelerated="@bool/useHardwareAcceleration"
             android:launchMode="singleTask"
@@ -115,7 +114,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="vnd.android.cursor.item/vnd.org.telegram.messenger.android.profile"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.ru.isaynet.messenger.android.profile"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -139,7 +138,7 @@
             <meta-data android:name="android.service.chooser.chooser_target_service" android:value=".TgChooserTargetService" />
         </activity>
         <activity
-            android:name="org.telegram.ui.ShareActivity"
+            android:name="ru.isaynet.ui.ShareActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:hardwareAccelerated="@bool/useHardwareAcceleration"
             android:windowSoftInputMode="adjustPan"
@@ -154,44 +153,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.telegram.ui.ManageSpaceActivity"
+            android:name="ru.isaynet.ui.ManageSpaceActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:hardwareAccelerated="@bool/useHardwareAcceleration"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan">
         </activity>
         <activity
-            android:name="org.telegram.ui.IntroActivity"
+            android:name="ru.isaynet.ui.IntroActivity"
             android:launchMode="singleTask"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
         </activity>
         <activity
-            android:name="org.telegram.messenger.OpenChatReceiver"
+            android:name="ru.isaynet.messenger.OpenChatReceiver"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:exported="true">
         </activity>
         <activity
-            android:name="org.telegram.ui.PopupNotificationActivity"
+            android:name="ru.isaynet.ui.PopupNotificationActivity"
             android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:taskAffinity=""
             android:theme="@style/Theme.TMessages.PopupNotification"
-            android:resizeableActivity="false"
             android:windowSoftInputMode="adjustResize|stateHidden">
         </activity>
         <activity
-            android:name="org.telegram.ui.VoIPActivity"
+            android:name="ru.isaynet.ui.VoIPActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
 			android:taskAffinity="${applicationId}.voip">
         </activity>
-        <activity android:name="org.telegram.ui.VoIPPermissionActivity"
+        <activity android:name="ru.isaynet.ui.VoIPPermissionActivity"
                   android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
                   android:taskAffinity="${applicationId}.voip"
                   android:excludeFromRecents="true"
                 android:theme="@style/Theme.TMessages.Transparent"/>
-        <activity android:name="org.telegram.ui.VoIPFeedbackActivity"
+        <activity android:name="ru.isaynet.ui.VoIPFeedbackActivity"
                   android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
 				  android:taskAffinity="${applicationId}.voip_feedback"
                   android:excludeFromRecents="true"
@@ -201,7 +199,7 @@
             android:name=".AutoMessageHeardReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="org.telegram.messenger.ACTION_MESSAGE_HEARD"/>
+                <action android:name="ru.isaynet.messenger.ACTION_MESSAGE_HEARD"/>
             </intent-filter>
         </receiver>
 
@@ -209,7 +207,7 @@
             android:name=".AutoMessageReplyReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="org.telegram.messenger.ACTION_MESSAGE_REPLY"/>
+                <action android:name="ru.isaynet.messenger.ACTION_MESSAGE_REPLY"/>
             </intent-filter>
         </receiver>
 
@@ -244,7 +242,7 @@
         </service>
 
         <service
-            android:name="org.telegram.messenger.TgChooserTargetService"
+            android:name="ru.isaynet.messenger.TgChooserTargetService"
             android:label="@string/AppName"
             android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
             <intent-filter>
@@ -278,11 +276,11 @@
 
         <receiver android:name=".MusicPlayerReceiver" >
             <intent-filter>
-                <action android:name="org.telegram.android.musicplayer.close" />
-                <action android:name="org.telegram.android.musicplayer.pause" />
-                <action android:name="org.telegram.android.musicplayer.next" />
-                <action android:name="org.telegram.android.musicplayer.play" />
-                <action android:name="org.telegram.android.musicplayer.previous" />
+                <action android:name="ru.isaynet.android.musicplayer.close" />
+                <action android:name="ru.isaynet.android.musicplayer.pause" />
+                <action android:name="ru.isaynet.android.musicplayer.next" />
+                <action android:name="ru.isaynet.android.musicplayer.play" />
+                <action android:name="ru.isaynet.android.musicplayer.previous" />
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <action android:name="android.media.AUDIO_BECOMING_NOISY" />
             </intent-filter>
@@ -295,7 +293,7 @@
 
         <receiver android:name=".AppStartReceiver" android:enabled="true">
             <intent-filter>
-                <action android:name="org.telegram.start" />
+                <action android:name="ru.isaynet.start" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>

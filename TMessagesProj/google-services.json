@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1047899906261",
+    "project_id": "isaynet-telegram-client"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047899906261:android:ba9a24868e6c4f35",
+        "android_client_info": {
+          "package_name": "ru.isaynet.messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047899906261-s8sta7bm0eiqsvop7jpgvu3nr9jvio9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.isaynet.messenger",
+            "certificate_hash": "a33a56adffcdcf9de1b6c9dd8d1d16aa11e3ff3e"
+          }
+        },
+        {
+          "client_id": "1047899906261-93e0af0cqqjfjla82gtbq5tfilgrgbnj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXCCvVa58z896mheF6fSQ9uOzZLtL7vQE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

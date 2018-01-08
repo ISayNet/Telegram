@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.telegram.messenger"
+    package="ru.isaynet.messenger"
     android:installLocation="auto">
 
     <uses-feature android:name="android.hardware.location.gps" android:required="false" />
@@ -10,8 +10,8 @@
     <uses-feature android:name="android.hardware.LOCATION" android:required="false" />
 
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="org.telegram.messenger.permission.MAPS_RECEIVE"/>
-    <uses-permission android:name="org.telegram.messenger.permission.C2D_MESSAGE" />
+    <uses-permission android:name="ru.isaynet.messenger.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="ru.isaynet.messenger.permission.C2D_MESSAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -19,13 +19,12 @@
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
 
-    <permission android:name="org.telegram.messenger.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
-    <permission android:name="org.telegram.messenger.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <permission android:name="ru.isaynet.messenger.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <permission android:name="ru.isaynet.messenger.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 
     <application
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
-        android:roundIcon="@drawable/ic_launcher"
         android:label="@string/AppNameBeta"
         android:theme="@style/Theme.TMessages.Start"
         android:name=".ApplicationLoader"
@@ -43,7 +42,7 @@
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <category android:name="org.telegram.messenger" />
+                <category android:name="ru.isaynet.messenger" />
             </intent-filter>
         </receiver>
         <service
